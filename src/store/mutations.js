@@ -2,6 +2,12 @@ const mutations = {
     ADD_VINOS(state, producto) {
         state.vinos.push(producto)
     },
+    ADD_PROMOCIONES(state, producto) {
+        state.promociones.push(producto)
+    },
+    ADD_ACCESORIOS(state, producto) {
+        state.accesorios.push(producto)
+    },
     ADD_TO_CART(state, producto) {
         let in_cart = state.carrito.some( (prod) => prod.id === producto.id )
         if ( !in_cart ) {

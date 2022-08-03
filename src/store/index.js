@@ -20,6 +20,8 @@ const vuexLocalStorage = new VuexPersist({
 export default new Vuex.Store({
   state: {
     vinos: [],
+    promociones: [],
+    accesorios: [],
     carrito: [],
     customer: []
   },

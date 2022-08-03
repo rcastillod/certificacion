@@ -21,10 +21,12 @@ export default {
     'nav-bar': NavBar
   },
   methods: {
-    ...mapActions(['fetchVinosAction'])
+    ...mapActions(['fetchVinosAction', 'fetchPromocionesAction', 'fetchAccesoriosAction'])
   },
   created() {
     this.fetchVinosAction()
+    this.fetchPromocionesAction()
+    this.fetchAccesoriosAction()
   }
 };
 </script>

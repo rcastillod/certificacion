@@ -19,7 +19,7 @@
             <div class="mt-3">{{descripcion}}</div>
         </v-card-text>
 
-        <v-card-actions>
+        <v-card-actions v-if="caracteristicas!=undefined">
             <v-btn text>
                 Características
             </v-btn>

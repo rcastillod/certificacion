@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VinosView from '../views/VinosView.vue'
+import PromocionesView from '../views/PromocionesView.vue'
+import AccesoriosView from '../views/AccesoriosView.vue'
 import CheckoutView from '../views/CheckoutView.vue'
 import ConfirmationView from '../views/ConfirmationView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
@@ -30,9 +32,19 @@ const routes = [
     component: ConfirmationView,
   },
   {
+    path: '/promociones',
+    name: 'promociones',
+    component: PromocionesView,
+  },
+  {
+    path: '/accesorios',
+    name: 'accesorios',
+    component: AccesoriosView,
+  },
+  {
     path: '*',
     name: 'notFound',
-   component: NotFoundView,
+    component: NotFoundView,
   }
 ]
 

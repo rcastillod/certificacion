@@ -37,17 +37,6 @@
                             >
                                 {{ route.title }}
                             </v-btn>
-                            <!-- <router-link to="/vinos">
-                                <v-btn text>
-                                    Vinos
-                                </v-btn>
-                            </router-link>
-                            <v-btn text>
-                                Vinos en Promoción
-                            </v-btn>
-                            <v-btn text>
-                                Accesorios
-                            </v-btn> -->
                         </div>
                         <mini-cart></mini-cart>
                         <v-app-bar-nav-icon 
@@ -97,7 +86,7 @@ export default {
             routes: [
                 { title: 'Home', name: 'home' },
                 { title: 'Vinos', name: 'vinos' },
-                { title: 'Vinos en Promoción', name: 'promocion' },
+                { title: 'Vinos en Promoción', name: 'promociones' },
                 { title: 'Accesorios', name: 'accesorios' },
             ],
         }

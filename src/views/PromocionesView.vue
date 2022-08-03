@@ -10,7 +10,7 @@
                     <v-col cols="12" md="8">
                         <v-row>
                             <v-col 
-                                v-for="(vino, i) in vinos"
+                                v-for="(promocion, i) in promociones"
                                 :key="i"
                                 class="d-flex align-stretch"
                                 cols="12" 
@@ -18,13 +18,13 @@
                                 md="4"
                             >
                                 <wine-card
-                                    :id="vino.id"
-                                    :nombre="vino.nombre"
-                                    :descripcion="vino.descripcion"
-                                    :caracteristicas="vino.caracteristicas"
-                                    :precionormal="vino.precio_normal"
-                                    :preciopromo="vino.precio_promo"
-                                    :imagen="vino.imagen"
+                                    :id="promocion.id"
+                                    :nombre="promocion.nombre"
+                                    :descripcion="promocion.descripcion"
+                                    :caracteristicas="promocion.caracteristicas"
+                                    :precionormal="promocion.precio_normal"
+                                    :preciopromo="promocion.precio_promo"
+                                    :imagen="promocion.imagen"
                                 ></wine-card>
                             </v-col>
                         </v-row>
@@ -42,12 +42,12 @@ import WineCard from '@/components/WineCard.vue'
 import Cart from '@/components/Cart.vue'
 
 export default {
-    name: 'vinos-view',
+    name: 'promociones-view',
     data: function(){
         return {}
     },
     computed: {
-        ...mapState(['vinos'])
+        ...mapState(['promociones'])
     },
     components: {
         'heading-section': HeadingSection,
