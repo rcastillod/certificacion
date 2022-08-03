@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VinosView from '../views/VinosView.vue'
+import CheckoutView from '../views/CheckoutView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/vinos',
     name: 'vinos',
     component: VinosView,
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    component: CheckoutView,
   }
   // {
   //   path: '/about',

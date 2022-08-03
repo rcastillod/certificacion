@@ -15,6 +15,9 @@ const actions = {
     },
     addToCartAction({ commit }, producto) {
         commit('ADD_TO_CART', producto)
+    },
+    addCustomerDataAction({ commit }, data) {
+        commit('ADD_CUSTOMER_DATA', data)
     }
 }
 

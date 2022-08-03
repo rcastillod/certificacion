@@ -13,6 +13,9 @@ const mutations = {
                 }
             })
         }
+    },
+    ADD_CUSTOMER_DATA(state, data) {
+        state.customer.push(data)
     }
 }
 

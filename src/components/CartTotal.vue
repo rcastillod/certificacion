@@ -12,11 +12,22 @@
             <div class="text-h5 font-weight-light">Total</div>
             <span>$ {{getCartTotal.toLocaleString('es-CL')}}</span>
         </div>
+        <div
+            v-if="carrito.length > 0"
+            class="cart-total__buton text-center mt-3">
+            <v-btn
+                color="secondary"
+                dark
+                @click="toCheckout"
+            >
+                Pagar
+            </v-btn>
+        </div>
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
     name: 'cart-total',
@@ -25,9 +36,14 @@ export default {
         return {}
     },
     computed: {
+        ...mapState(['carrito']),
         ...mapGetters(['getCartSubTotal', 'getCartDiscount', 'getCartTotal'])
     },
-    //methods: {}
+    methods: {
+        toCheckout() {
+            this.$router.push('/checkout')
+        }
+    }
     // watch: {},
     // components: {},
     // mixins: [],
