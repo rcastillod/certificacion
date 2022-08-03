@@ -3,10 +3,10 @@
         <v-container>
             <v-row>
                 <v-col cols="12" sm="4">
-                    <!-- Carrito -->
+                    <h3>Bolsa de Compra Vinos Mi Chile</h3>
+                    <cart-shop></cart-shop>
                 </v-col>
                 <v-col cols="12" sm="8">
-                    <!-- Listado -->
                     <v-row>
                         <v-col 
                             v-for="(vino, i) in vinos"
@@ -34,6 +34,7 @@
 <script>
 import { mapState } from 'vuex'
 import WineCard from '@/components/WineCard.vue'
+import Cart from '@/components/Cart.vue'
 
 export default {
     name: 'vinos-view',
@@ -47,7 +48,8 @@ export default {
     //methods: {}
     // watch: {},
     components: {
-        'wine-card': WineCard
+        'wine-card': WineCard,
+        'cart-shop': Cart
     },
     // mixins: [],
     // filters: {},

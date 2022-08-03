@@ -96,7 +96,8 @@ export default {
                 id: this.id,
                 count: 1,
                 nombre: this.nombre,
-                precio: this.precion,
+                precio: this.preciopromo,
+                imagen: this.imagen,
             }
             this.addToCartAction(producto)
         }
