@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="d-flex justify-space-between align-center mt-5">
-                <div class="text-h5 font-weight-light">Total: {{getCartTotal}}</div>
+                <div class="text-h5 font-weight-light">Total: {{getCartTotal.toLocaleString('es-CL')}}</div>
                 <v-btn
                     color="secondary"
                     @click="confirmToHome"
