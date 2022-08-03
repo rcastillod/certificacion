@@ -1,9 +1,9 @@
 <template>
     <v-app-bar
-        app
         color="white"
-        class="nav-bar py-2"
+        class="nav-bar"
         elevation="0"
+        height="80"
     >
         <v-container>
             <v-row align="center">
