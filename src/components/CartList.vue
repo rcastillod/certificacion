@@ -11,7 +11,16 @@
                     <img :src="producto.imagen" alt="Product">
                 </div>
                 <div class="card-list__info">
-                    <div class="name white--text">{{producto.nombre}}</div>
+                    <div class="name white--text">
+                        {{producto.nombre}}
+                        <v-badge
+                            :content="`x ${producto.count}`"
+                            :value="producto.count"
+                            class="ml-2"
+                            color="secondary"
+                        >
+                        </v-badge>
+                    </div>
                     <div class="price white--text">$ {{producto.precio.toLocaleString('es-CL')}}</div>
                 </div>
             </div>

@@ -2,6 +2,9 @@ const getters = {
     getCartCount(state) {
         return state.carrito.length
     },
+    getProductCount(state) {
+        return state.carrito.count
+    },
     getCartProducts(state) {
         return state.carrito.map((producto) => {
             let prod = producto

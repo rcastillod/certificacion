@@ -1,8 +1,5 @@
 <template>
-    <v-card
-        class="mx-auto"
-        max-width="374"
-    >
+    <v-card>
         <template slot="progress">
             <v-progress-linear
                 color="deep-purple"
@@ -10,38 +7,54 @@
                 indeterminate
             ></v-progress-linear>
         </template>
-
-        <v-img
-            height="250"
-            :src="imagen"
-        ></v-img>
-        <v-card-title>{{nombre}}</v-card-title>
+        <v-img :src="imagen"></v-img>
+        <v-card-title class="text-h6">{{nombre}}</v-card-title>
         <v-card-text>
-            <div class="my-4 text-subtitle-1">
-                Antes: $ {{precionormal}}
+            <div class="text-subtitle-1 text-decoration-line-through">
+                Antes: $ {{precionormal.toLocaleString('es-CL')}}
             </div>
-            <div class="my-4 text-subtitle-1">
-                Ahora: $ {{preciopromo}}
+            <div class="text-subtitle-1 secondary--text">
+                Ahora: $ {{preciopromo.toLocaleString('es-CL')}}
             </div>
-            <div>{{descripcion}}</div>
-            <v-list>
-                <v-list-item 
-                    v-for="(caracteristica, i) in caracteristicas"
-                    :key="i"
-                >
-                    <v-list-item-content>
-                        <v-list-item-title>- {{caracteristica}}</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
-            </v-list>
+            <div class="mt-3">{{descripcion}}</div>
         </v-card-text>
+
+        <v-card-actions>
+            <v-btn text>
+                Características
+            </v-btn>
+
+            <v-spacer></v-spacer>
+
+            <v-btn
+                icon
+                @click="show = !show"
+            >
+                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+            </v-btn>
+        </v-card-actions>
+        <v-expand-transition>
+            <div v-show="show">
+                <v-list>
+                    <v-list-item 
+                        v-for="(caracteristica, i) in caracteristicas"
+                        :key="i"
+                        dense
+                    >
+                        <v-list-item-content class="py-0">
+                            <v-list-item-title class="text-body-2">- {{caracteristica}}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list>
+            </div>
+        </v-expand-transition>
 
         <v-divider class="mx-4"></v-divider>
 
-        <v-card-actions>
+        <v-card-actions class="d-flex justify-center py-6">
             <v-btn
-                color="deep-purple lighten-2"
-                text
+                color="secondary"
+                outlined
                 @click="addToCart()"
             >
                 Agregar
@@ -86,7 +99,9 @@ export default {
         },
     },
     data: function(){
-        return {}
+        return {
+            show: false,
+        }
     },
     // computed: {},
     methods: {
