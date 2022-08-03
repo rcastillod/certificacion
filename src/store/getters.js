@@ -16,15 +16,16 @@ const getters = {
     },
     getCartDiscount(state, getters) {
         let discount = ''
-        let totalDiscount = ''
         if ( getters.getCartSubTotal < 100000 ) {
             discount = (5 / 100) * getters.getCartSubTotal
-            totalDiscount = getters.getCartSubTotal - discount
         } else if ( getters.getCartSubTotal >= 100000 ) {
             discount = (11 / 100) * getters.getCartSubTotal
-            totalDiscount = getters.getCartSubTotal - discount
         }
-        return totalDiscount
+        return discount
+    },
+    getCartTotal(state, getters) {
+        let result = getters.getCartSubTotal - getters.getCartDiscount
+        return result
     }
 }
 

@@ -7,7 +7,6 @@
         >
             <v-card
             color="transparent"
-
             >
                 <div class="d-flex flex-no-wrap justify-space-between">
                     <div>

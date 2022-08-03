@@ -2,15 +2,15 @@ GettersmapGetters<template>
     <div class="cart-total d-flex flex-column">
         <div class="cart-total__subtotal d-flex justify-space-between">
             <div class="text-h5 font-weight-light">Subtotal Productos</div>
-            <span>{{getCartSubTotal}}</span>
+            <span>$ {{getCartSubTotal.toLocaleString('es-CL')}}</span>
         </div>
         <div class="cart-total__discount d-flex justify-space-between">
             <div class="text-h5 font-weight-light">Descuentos</div>
-            <span>{{getCartDiscount}}</span>
+            <span>$ {{getCartDiscount.toLocaleString('es-CL')}}</span>
         </div>
         <div class="cart-total__total d-flex justify-space-between">
             <div class="text-h5 font-weight-light">Total</div>
-            <span>0</span>
+            <span>$ {{getCartTotal.toLocaleString('es-CL')}}</span>
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@ export default {
         return {}
     },
     computed: {
-        ...mapGetters(['getCartSubTotal', 'getCartDiscount'])
+        ...mapGetters(['getCartSubTotal', 'getCartDiscount', 'getCartTotal'])
     },
     //methods: {}
     // watch: {},
