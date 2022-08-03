@@ -1,5 +1,6 @@
 <template>
     <div class="cart">
+        <h3 class="text-h5 font-weight-light mb-5 white--text">Bolsa de Compra Vinos Mi Chile</h3>
         <cart-list></cart-list>
         <cart-total></cart-total>
     </div>

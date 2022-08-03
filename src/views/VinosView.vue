@@ -3,7 +3,6 @@
         <v-container>
             <v-row>
                 <v-col cols="12" sm="4">
-                    <h3 class="text-h5 font-weight-light mb-5">Bolsa de Compra Vinos Mi Chile</h3>
                     <cart-shop></cart-shop>
                 </v-col>
                 <v-col cols="12" sm="8">

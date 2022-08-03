@@ -1,37 +1,22 @@
 <template>
-    <v-row dense>
-        <v-col
+    <div>
+        <div 
             v-for="(producto, i) in carrito"
             :key="i"
             cols="12"
+            class="cart-list"
         >
-            <v-card
-            color="transparent"
-            >
-                <div class="d-flex flex-no-wrap justify-space-between">
-                    <div>
-                        <v-card-title
-                            class="text-h5"
-                            v-text="producto.nombre"
-                        ></v-card-title>
-                        <v-card-subtitle v-text="producto.precio"></v-card-subtitle>
-                    </div>
-                    <v-avatar
-                        class="ma-3"
-                        size="125"
-                        tile
-                    >
-                        <v-img :src="producto.imagen"></v-img>
-                    </v-avatar>
+            <div class="cart-list__item">
+                <div class="cart-list__image">
+                    <img :src="producto.imagen" alt="Product">
                 </div>
-            </v-card>
-        </v-col>
-        <v-divider
-            v-show="carrito.length > 0"
-            class="align-self-start"
-            dark
-        ></v-divider>
-    </v-row>
+                <div class="card-list__info">
+                    <div class="name white--text">{{producto.nombre}}</div>
+                    <div class="price white--text">$ {{producto.precio.toLocaleString('es-CL')}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -56,6 +41,26 @@ export default {
 }
 </script>
 
-<style scoped>
-    
+<style scoped lang="scss">
+.cart-list {
+    padding-block: 20px;
+    &:not(:last-of-type) {
+        border-bottom: 1px solid rgba(#fff, .1);
+    }
+
+    &__item {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 5rem auto;
+    }
+    &__image {
+        & > img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    }
+    &__info {
+        color: #fff;
+    }
+}
 </style>

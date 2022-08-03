@@ -1,4 +1,4 @@
-GettersmapGetters<template>
+<template>
     <div class="cart-total d-flex flex-column">
         <div class="cart-total__subtotal d-flex justify-space-between">
             <div class="text-h5 font-weight-light">Subtotal Productos</div>
@@ -37,9 +37,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .cart-total {
+    border-top: 1px solid rgba(#000, .2);
     color: #fff;
     gap: .625rem;
+    padding-top: 1.25rem;
 }
 </style>
