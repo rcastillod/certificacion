@@ -21,7 +21,8 @@
                   v-for="(category, i) in categoryWines"
                   :key="i"
                   cols="12" 
-                  md="4"
+                  md="6" 
+                  lg="4"
                 >
                   <category-card 
                     :nombre="category.nombre"

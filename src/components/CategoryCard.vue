@@ -2,11 +2,11 @@
     <div class="category-card">
         <div class="category-card__inner" :style="{ backgroundImage: `url(${imagenBg})` }">
             <div class="card-content">
-                <div class="card-content__title">{{nombre}}</div>
+                <div class="card-content__title text-h4 font-weight-light">{{nombre}}</div>
                 <div class="card-content__info">{{texto}}</div>
             </div>
         </div>
-        <div class="card-image">
+        <div class="card-image d-none d-sm-block">
             <img :src="imagen" alt="Category">
         </div>
     </div>
@@ -50,8 +50,10 @@ export default {
 <style scoped lang="scss">
 .category-card {
     height: 31.25rem;
-    padding: 1.875rem;
     position: relative;
+    @media ( min-width: 600px ) {
+        padding: 1.875rem;
+    }
 
     &__inner {
         background-size: cover;
@@ -62,14 +64,22 @@ export default {
     }
 }
 .card-content {
-    background-color: rgba(#000, .6);
+    background-color: rgba(#000, .7);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     padding: 1.25rem;
 
     &__title {
         font-size: 1.875rem;
         margin-bottom: 1.25rem;
+    }
+    &__info {
+        @media ( min-width: 600px ) {
+            padding-right: 3.125rem;
+        }
     }
 }
 .card-image {
@@ -78,7 +88,7 @@ export default {
     right: 0;
 
     & > img {
-        width: 12.5rem;
+        width: 7.5rem;
     }
 }
 </style>
