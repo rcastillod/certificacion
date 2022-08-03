@@ -47,7 +47,6 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'confirmation-info',
-    // props: {},
     data: function(){
         return {}
     },
@@ -66,12 +65,6 @@ export default {
             this.$router.push('/')
         }
     }
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
 }
 </script>
 

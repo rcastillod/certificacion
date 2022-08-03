@@ -31,7 +31,6 @@ import { mapState, mapGetters } from 'vuex'
 
 export default {
     name: 'cart-total',
-    // props: {},
     data: function(){
         return {}
     },
@@ -44,12 +43,6 @@ export default {
             this.$router.push('/checkout')
         }
     }
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
 }
 </script>
 

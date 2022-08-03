@@ -50,11 +50,9 @@ import MiniCart from '@/components/MiniCart.vue'
 
 export default {
     name: 'nav-bar',
-    // props: {},
     data: function(){
         return {}
     },
-    //computed: {},
     methods: {
         toHome() {
             if ( this.$route.name !== 'home' ) {
@@ -62,14 +60,9 @@ export default {
             }
         }
     },
-    // watch: {},
     components: {
         'mini-cart': MiniCart
-    },
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

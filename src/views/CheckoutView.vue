@@ -23,22 +23,14 @@ import CheckoutForm from '@/components/CheckoutForm.vue'
 
 export default {
     name: 'checkout-view',
-    // props: {},
     data: function(){
         return {}
     },
-    // computed: {},
-    //methods: {}
-    // watch: {},
     components: {
         'heading-section': HeadingSection,
         'cart-shop': Cart,
         'checkout-form': CheckoutForm
-    },
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

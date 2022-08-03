@@ -42,24 +42,17 @@ import Cart from '@/components/Cart.vue'
 
 export default {
     name: 'vinos-view',
-    // props: {},
     data: function(){
         return {}
     },
     computed: {
         ...mapState(['vinos'])
     },
-    //methods: {}
-    // watch: {},
     components: {
         'heading-section': HeadingSection,
         'wine-card': WineCard,
         'cart-shop': Cart
-    },
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

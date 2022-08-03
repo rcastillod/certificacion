@@ -12,21 +12,13 @@ import CartTotal from './CartTotal.vue'
 
 export default {
     name: 'cart-shop',
-    // props: {},
     data: function(){
         return {}
     },
-    // computed: {},
-    //methods: {}
-    // watch: {},
     components: {
         'cart-list': CartList,
         'cart-total': CartTotal,
-    },
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

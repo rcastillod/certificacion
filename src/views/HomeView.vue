@@ -51,7 +51,6 @@ import CategoryCard from '@/components/CategoryCard.vue'
             categoryWines: [],
         }
     },
-    // computed: {},
     methods: {
         async fetchWinesData() {
             try {
@@ -73,19 +72,13 @@ import CategoryCard from '@/components/CategoryCard.vue'
             }
         }
     },
-    // watch: {},
     components: {
       'carousel-items': CarouselItems,
       'category-card': CategoryCard
     },
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
     created() {
         this.fetchWinesData()
     }
-    // -- End Lifecycle Methods
   }
 </script>
 

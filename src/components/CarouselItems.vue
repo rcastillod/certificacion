@@ -43,15 +43,6 @@ export default {
             model: 0,
         }
     },
-    // computed: {},
-    // methods: {},
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // created() {}
-    // -- End Lifecycle Methods
 }
 </script>
 

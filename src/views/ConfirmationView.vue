@@ -19,21 +19,13 @@ import ConfirmationInfo from '@/components/ConfirmationInfo.vue'
 
 export default {
     name: 'confirmation-view',
-    // props: {},
     data: function(){
         return {}
     },
-    // computed: {},
-    //methods: {}
-    // watch: {},
     components: {
         'heading-section': HeadingSection,
         'confirmation-info': ConfirmationInfo
-    },
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

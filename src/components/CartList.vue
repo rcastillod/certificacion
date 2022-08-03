@@ -33,20 +33,12 @@ import { mapState } from 'vuex'
 
 export default {
     name: 'cart-list',
-    // props: {},
     data: function(){
         return {}
     },
     computed: {
         ...mapState(['carrito'])
-    },
-    //methods: {}
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

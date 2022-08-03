@@ -104,7 +104,6 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'checkout-form',
-    // props: {},
     data: function(){
         return {
             radioGroup: 0,
@@ -176,12 +175,6 @@ export default {
             }
         }
     }
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
 }
 </script>
 

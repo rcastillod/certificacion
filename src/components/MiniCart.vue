@@ -16,21 +16,13 @@ import { mapGetters } from 'vuex'
 
 export default {
     name: 'component-name',
-    // props: {},
     data: function(){
         return {
         }
     },
     computed: {
         ...mapGetters(['getCartCount'])
-    },
-    //methods: {}
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 

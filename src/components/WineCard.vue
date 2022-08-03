@@ -103,7 +103,6 @@ export default {
             show: false,
         }
     },
-    // computed: {},
     methods: {
         ...mapActions(['addToCartAction']),
         addToCart() {
@@ -116,13 +115,7 @@ export default {
             }
             this.addToCartAction(producto)
         }
-    },
-    // watch: {},
-    // components: {},
-    // mixins: [],
-    // filters: {},
-    // -- Lifecycle Methods
-    // -- End Lifecycle Methods
+    }
 }
 </script>
 
