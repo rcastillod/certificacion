@@ -171,6 +171,8 @@ export default {
                 data.descuento = this.getCartDiscount
                 data.total = this.getCartTotal
                 this.addCustomerDataAction(data)
+
+                this.$router.push('/confirm')
             }
         }
     }

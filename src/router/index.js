@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VinosView from '../views/VinosView.vue'
 import CheckoutView from '../views/CheckoutView.vue'
+import ConfirmationView from '../views/ConfirmationView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 Vue.use(VueRouter)
 
@@ -21,15 +23,17 @@ const routes = [
     path: '/checkout',
     name: 'checkout',
     component: CheckoutView,
+  },
+  {
+    path: '/confirm',
+    name: 'confirm',
+    component: ConfirmationView,
+  },
+  {
+    path: '*',
+    name: 'notFound',
+   component: NotFoundView,
   }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
 const router = new VueRouter({

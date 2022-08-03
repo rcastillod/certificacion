@@ -4,6 +4,7 @@
         class="nav-bar"
         elevation="0"
         height="80"
+        app
     >
         <v-container>
             <v-row align="center">
