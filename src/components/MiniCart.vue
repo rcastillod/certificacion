@@ -1,7 +1,7 @@
 <template>
     <v-badge
-        :content="messages"
-        :value="messages"
+        :content="getCartCount"
+        :value="getCartCount"
         color="red"
         overlap
     >
@@ -12,15 +12,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     name: 'component-name',
     // props: {},
     data: function(){
         return {
-            messages: 0
         }
     },
-    // computed: {},
+    computed: {
+        ...mapGetters(['getCartCount'])
+    },
     //methods: {}
     // watch: {},
     // components: {},

@@ -55,7 +55,7 @@ import CategoryCard from '@/components/CategoryCard.vue'
         async fetchWinesData() {
             try {
                 let response = await fetch('./home.json')
-                if ( !response.ok ) throw ('Ocurrió un problema al obtener los datos')
+                if ( !response.ok ) throw 'Ocurrió un problema al obtener los datos'
                 
                 let data = await response.json()
 

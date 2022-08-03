@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import NavBar from '@/components/NavBar.vue'
 
 export default {
@@ -18,6 +19,12 @@ export default {
   }),
   components: {
     'nav-bar': NavBar
+  },
+  methods: {
+    ...mapActions(['fetchVinosAction'])
+  },
+  created() {
+    this.fetchVinosAction()
   }
 };
 </script>
