@@ -1,7 +1,7 @@
 <template>
     <div class="confirmation-info">
         <h3 class="text-h3 font-weight-light">Felicitaciones</h3>
-        <p class="text-body-1">Tu compra en Vinos Mi Chile ha sido exitosa!</p>
+        <p class="text-body-1">Tu compra N° {{orderNumber}} en Vinos Mi Chile ha sido exitosa!</p>
         <p class="text-body-1">A continuación te dejamos un resumen de la compra:</p>
         <div class="resumen">
             <div 
@@ -54,6 +54,9 @@ export default {
     computed: {
         ...mapState(['carrito']),
         ...mapGetters(['getCartTotal']),
+        orderNumber() {
+            return Math.floor(Math.random()*1000);
+        }
     },
     methods: {
         ...mapActions(['cleanCartAction']),
