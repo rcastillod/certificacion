@@ -2,7 +2,6 @@
     <v-form
         ref="form"
         v-model="valid"
-        lazy-validation
     >
         <div class="form-group mb-5">
             <div class="text-h5 font-weight-light mb-3">Datos del Comprador</div>
@@ -111,13 +110,13 @@ export default {
             alertError: false,
             alertErrorMessage: '',
             customerData: {
-                nombre: null,
-                email: null,
-                confirmEmail: null,
-                telefono: null,
-                direccion: null,
-                comuna: null,
-                pago: null,
+                nombre: '',
+                email: '',
+                confirmEmail: '',
+                telefono: '',
+                direccion: '',
+                comuna: '',
+                pago: '',
             },
             payments: [
                 'Transferencia Bancaria',

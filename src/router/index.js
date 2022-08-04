@@ -25,6 +25,9 @@ const routes = [
     path: '/checkout',
     name: 'checkout',
     component: CheckoutView,
+    meta: {
+      hideCartButton: true
+    }
   },
   {
     path: '/confirm',
