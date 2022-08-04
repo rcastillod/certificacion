@@ -4,6 +4,19 @@
     <v-main>
       <router-view/>
     </v-main>
+    <v-footer 
+      class="footer"
+      dark
+      padless
+    >
+      <v-col
+        class="text-center
+        py-5"
+        cols="12"
+      >
+        &copy; Copyright {{ new Date().getFullYear() }} — <strong>Vinos Mi Chile</strong>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -48,5 +61,8 @@ export default {
     transform: translateY(-50%);
     z-index: -1;
   }
+}
+.footer {
+  background-image: linear-gradient(40deg, #191E2A, #313E53);
 }
 </style>

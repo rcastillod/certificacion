@@ -7,6 +7,16 @@
             class="cart-list"
         >
             <div class="cart-list__item">
+                <div 
+                    class="cart-list__remove" 
+                    @click="removeProduct(producto.id)"
+                >
+                    <v-badge
+                        color="primary"
+                        content="x"
+                    >
+                    </v-badge>
+                </div>
                 <div class="cart-list__image">
                     <img :src="producto.imagen" alt="Product">
                 </div>
@@ -29,7 +39,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
     name: 'cart-list',
@@ -38,6 +48,12 @@ export default {
     },
     computed: {
         ...mapState(['carrito'])
+    },
+    methods: {
+        ...mapActions(['removeProductAction']),
+        removeProduct(id) {
+            this.removeProductAction(id)
+        }
     }
 }
 </script>
@@ -52,7 +68,14 @@ export default {
     &__item {
         display: grid;
         gap: 1.25rem;
-        grid-template-columns: 5rem auto;
+        grid-template-columns: 1.875rem 5rem auto;
+    }
+    &__remove {
+        display: grid;
+        place-items: center;
+        .v-badge {
+            cursor: pointer;
+        }
     }
     &__image {
         & > img {

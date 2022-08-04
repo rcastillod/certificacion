@@ -5,6 +5,7 @@ const actions = {
             if( !response.ok ) throw 'Ocurrió un error al obtener los datos'
 
             let data = await response.json()
+            commit('CLEAN_VINOS')
             data.productos.forEach(producto => {
                 commit('ADD_VINOS', producto)
             });
@@ -17,8 +18,9 @@ const actions = {
         try {
             let response = await fetch('./promocion.json')
             if( !response.ok ) throw 'Ocurrió un error al obtener los datos'
-
+            
             let data = await response.json()
+            commit('CLEAN_PROMOCIONES')
             data.productos.forEach(producto => {
                 commit('ADD_PROMOCIONES', producto)
             });
@@ -31,8 +33,9 @@ const actions = {
         try {
             let response = await fetch('./accesorios.json')
             if( !response.ok ) throw 'Ocurrió un error al obtener los datos'
-
+            
             let data = await response.json()
+            commit('CLEAN_ACCESORIOS')
             data.productos.forEach(producto => {
                 commit('ADD_ACCESORIOS', producto)
             });
@@ -49,7 +52,10 @@ const actions = {
     },
     cleanCartAction({ commit }) {
         commit('CLEAN_CART')
-    }
+    },
+    removeProductAction({ commit }, productoID){
+        commit('REMOVE_PRODUCT', productoID)
+    },
 }
 
 export default actions
