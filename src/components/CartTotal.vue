@@ -16,6 +16,7 @@
             v-if="carrito.length > 0"
             class="cart-total__buton text-center mt-3">
             <v-btn
+                v-show="!$route.meta.hideCartButton"
                 color="secondary"
                 dark
                 @click="toCheckout"

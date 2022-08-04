@@ -126,7 +126,7 @@ export default {
             ],
             nameRules: [
                 v => !!v || 'El nombre es obligatorio',
-                v => (v && v.length >= 10) || 'El nombre debe tener al menos 10 caracteres',
+                v => (v && v.length >= 6) || 'El nombre debe tener al menos 10 caracteres',
             ],
             emailRules: [
                 v => !!v || 'El email es obligatorio',
@@ -153,9 +153,10 @@ export default {
     methods: {
         ...mapActions(['addCustomerDataAction']),
         ruleConfirmEmail() {
-            if ( this.customerData.email != this.customerData.confirmEmail ) {
+            if ( this.customerData.email != this.customerData.confirmEmail || this.customerData.confirmEmail == '' ) {
                 return 'El email no coincide'
             }
+            return true
         },
         formValidation() {
             this.$refs.form.validate()
