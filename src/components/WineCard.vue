@@ -83,7 +83,6 @@ export default {
         },
         caracteristicas: {
             type: Array,
-            required: true,
         },
         precionormal: {
             type: Number,
